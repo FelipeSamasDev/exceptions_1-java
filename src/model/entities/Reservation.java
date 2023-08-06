@@ -46,10 +46,10 @@ public class Reservation {
 		Date now = new Date();
 		// METODO RUIM
 		if (checkIn.before(now) || checkOut.before(now)) {
-			return "Error in reservation: Check-out date must be after check-in date";
-		}
-		if (!checkOut.after(checkIn)) {
 			return "Error in reservation: Reservation dates for update must be future dates";
+		}
+		if (!checkOut.after(checkIn)) { 
+			return "Error in reservation: Check-out date must be after check-in date";
 		}
 
 		this.checkIn = checkIn;
